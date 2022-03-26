@@ -13,15 +13,38 @@ function Leftside() {
 	}
 	useEffect(fetching, []);
 	console.log(insta);
+	function upvotesComparison(a, b) {
+		if (a.likes > b.likes) {
+			return -1;
+		}
+		if (a.likes < b.likes) {
+			return 1;
+		}
+		return 0;
+	}
+
+	function sortLikes(insta) {
+		return insta.sort(upvotesComparison);
+	}
+	const handleMostUpvoted = () => setInsta([...sortLikes(insta)]);
 	return (
 		<>
 			<div className="container-fluid">
 				<div className="row">
+					<button
+						type="button"
+						class="btn btn-primary col-2 ms-auto me-auto"
+						onClick={handleMostUpvoted}>
+						Sort By Likes
+					</button>
+				</div>
+				<div className="row">
 					{insta.map((takeObj) => {
 						return (
 							<div
-								class="card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12"
-								style={{ width: "18rem" }}>
+								class="card col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-12 shadow ms-3 my-5"
+								style={{ width: "18rem" }}
+								key={insta.indexOf(takeObj)}>
 								<img
 									src={takeObj.Image}
 									class="card-img-top"
