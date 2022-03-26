@@ -11,7 +11,9 @@ function App() {
 			"https://s3-ap-southeast-1.amazonaws.com/he-public-data/instaf913f18.json"
 		)
 			.then((res) => res.json())
-			.then((json) => setInsta(json))
+			.then((json) => {
+				setInsta(json);
+			})
 			.catch((error) => console.log("error", error));
 	}
 	useEffect(fetching, []);
@@ -28,6 +30,7 @@ function App() {
 		return insta.sort(upvotesComparison);
 	}
 	const handleMostUpvoted = () => setInsta([...sortLikes(insta)]);
+
 	return (
 		<div className="container-fluid">
 			<div className="row">

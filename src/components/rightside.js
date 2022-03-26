@@ -12,7 +12,11 @@ function Rightside({ select, setSelect }) {
 		setSelect(newsin);
 	}
 	if (select.Image === undefined) {
-		return <></>;
+		return (
+			<div className="sticky-top">
+				<h1 className="mt-5 fw-bold">Select any card to preview</h1>
+			</div>
+		);
 	}
 	const phototaken = new Date(select.timestamp);
 	return (

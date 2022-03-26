@@ -8,7 +8,7 @@ function Leftside({ insta, handleMostUpvoted, setSelect }) {
 				<div className="row">
 					<button
 						type="button"
-						class="btn btn-primary col-2 ms-auto me-auto mt-5"
+						class="btn btn-primary col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-5 ms-auto me-auto mt-5"
 						onClick={handleMostUpvoted}>
 						Sort By Likes
 					</button>
