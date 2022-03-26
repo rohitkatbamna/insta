@@ -10,10 +10,9 @@ function Leftsidecard({ takeObj, setSelect }) {
 				className="card shadow"
 				onClick={HandleClick}
 				style={{ cursor: "pointer" }}>
-				<img src={takeObj.Image} class="card-img-top" alt="Random person" />
-				<div class="card-body">
-					<h5 class="card-title">Likes {takeObj.likes}</h5>
-					<p class="card-text">{takeObj.timestamp}</p>
+				<img src={takeObj.Image} className="card-img-top" alt="Random person" />
+				<div className="card-body">
+					<h5 className="card-title">Likes {takeObj.likes}</h5>
 				</div>
 			</div>
 		</>

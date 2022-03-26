@@ -31,21 +31,15 @@ function App() {
 	return (
 		<div className="container-fluid">
 			<div className="row">
-				<div className="col-xxl-6 col-xl-6 col-lg-7 col-md-6 col-sm-3">
+				<div className="col-xxl-6 col-xl-6 col-lg-5 col-md-4 col-sm-6">
 					<Leftside
 						insta={insta}
 						handleMostUpvoted={handleMostUpvoted}
 						setSelect={setSelect}
 					/>
 				</div>
-				<div className="col-xxl-6 col-xl-6 col-lg-5 col-md-6 col-sm-8">
-					<Rightside
-						select={select}
-						setSelect={setSelect}
-						insta={insta}
-						setInsta={setInsta}
-						handleMostUpvoted={handleMostUpvoted}
-					/>
+				<div className="col-xxl-6 col-xl-6 col-lg-7 col-md-8 col-sm-6">
+					<Rightside select={select} setSelect={setSelect} />
 				</div>
 			</div>
 		</div>
