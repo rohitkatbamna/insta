@@ -1,14 +1,14 @@
 import React from "react";
 import Leftsidecard from "./leftsidecard";
 
-function Leftside({ insta, setInsta, handleMostUpvoted, select, setSelect }) {
+function Leftside({ insta, handleMostUpvoted, setSelect, like, setLike }) {
 	return (
 		<>
 			<div className="container-fluid">
 				<div className="row">
 					<button
 						type="button"
-						class="btn btn-primary col-2 ms-auto me-auto"
+						class="btn btn-primary col-2 ms-auto me-auto sticky-top"
 						onClick={handleMostUpvoted}>
 						Sort By Likes
 					</button>
